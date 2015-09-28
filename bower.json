@@ -1,0 +1,26 @@
+{
+  "name": "remap.js",
+  "version": "1.0.0",
+  "authors": [
+    "Salvador de la Puente <salva@unoyunodiez.com>"
+  ],
+  "description": "Remap dependencies for require.js modules.",
+  "main": "src/remap.js",
+  "keywords": [
+    "injection",
+    "dependency",
+    "mocks",
+    "requirejs",
+    "stub",
+    "testing"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/lodr/remapjs",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
