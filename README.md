@@ -29,8 +29,8 @@ var req = require.contextualized({
   'ChatClient': ClientMock
 });
 
-// When trying to load dependecies for ChatWidget, requiring 'ChatServer' will
-// return MockServer and requiring 'ChatClient' will return MockClient.
+// When trying to load dependecies for ChatWidget, requiring 'ServerMock' will
+// return MockServer and requiring 'ClientMock' will return MockClient.
 req('ChatWidget', function (ChatWidget) {
   testingSubject = ChatWidget;
 });
@@ -40,7 +40,7 @@ req('ChatWidget', function (ChatWidget) {
 
 Actually, I did not use require.js for bundling my projects but I find it very convenient for unit testing. This is a setup I usually work with combined with [Chai](http://chaijs.com/).
 
-Suppose you have the former definition of `ChatWidget`:
+Suppose you have this definition of `ChatWidget`:
 
 ```js
 // src/ChatWidget.js
@@ -56,7 +56,7 @@ define([
 });
 ```
 
-And you want to load your mocks and inject when loading `ChatWidget` so, in your spec file you do:
+And you want `ChatWidget` to use mocked object instead of the actual modules, so in your spec file you do:
 
 ```js
 // ChatWidget.spec.js
