@@ -66,21 +66,21 @@ define([
   'mocks/ClientMock'
 ], function (ServerMock, ClientMock) {
 
-  var ChatWidget;
-
-  var req = require.contextualized({
-    'ChatServer': ServerMock,
-    'ChatClient': ClientMock
-  });
-
-  beforeEach(function (done) {
-    req('src/ChatWidget', function (subject) {
-      ChatWidget = subject;
-      done();
-    });
-  });
-
   describe(function () {
+  
+    var ChatWidget;
+    
+    var req = require.contextualized({
+      'ChatServer': ServerMock,
+      'ChatClient': ClientMock
+    });
+  
+    beforeEach(function (done) {
+      req('src/ChatWidget', function (subject) {
+        ChatWidget = subject;
+        done();
+      });
+    });
 
     // Your tests here...
   
