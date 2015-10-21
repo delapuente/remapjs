@@ -36,9 +36,9 @@ req('ChatWidget', function (ChatWidget) {
 });
 ```
 
-## Use with Chai.js
+## Use with Mocha.js
 
-Actually, I did not use require.js for bundling my projects but I find it very convenient for unit testing. This is a setup I usually work with combined with [Chai](http://chaijs.com/).
+Actually, I did not use require.js for bundling my projects but I find it very convenient for unit testing. This is a setup I usually work with combined with [Mocha](https://mochajs.org/).
 
 Suppose you have this definition of `ChatWidget`:
 
@@ -66,21 +66,21 @@ define([
   'mocks/ClientMock'
 ], function (ServerMock, ClientMock) {
 
-  var ChatWidget;
-
-  var req = require.contextualized({
-    'ChatServer': ServerMock,
-    'ChatClient': ClientMock
-  });
-
-  beforeEach(function (done) {
-    req('src/ChatWidget', function (subject) {
-      ChatWidget = subject;
-      done();
-    });
-  });
-
   describe(function () {
+  
+    var ChatWidget;
+    
+    var req = require.contextualized({
+      'ChatServer': ServerMock,
+      'ChatClient': ClientMock
+    });
+  
+    beforeEach(function (done) {
+      req('src/ChatWidget', function (subject) {
+        ChatWidget = subject;
+        done();
+      });
+    });
 
     // Your tests here...
   
