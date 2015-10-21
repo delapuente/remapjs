@@ -1,6 +1,6 @@
 {
   "name": "remap.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     "Salvador de la Puente <salva@unoyunodiez.com>"
   ],
@@ -15,7 +15,7 @@
     "testing"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/lodr/remapjs",
+  "homepage": "https://github.com/delapuente/remapjs",
   "ignore": [
     "**/.*",
     "node_modules",
